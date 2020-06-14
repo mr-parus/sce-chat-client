@@ -1,0 +1,10 @@
+.Title {
+    user-select: none;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}

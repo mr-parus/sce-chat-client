@@ -1,0 +1,71 @@
+.ChatPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.ChatPageBack {
+    top: 40px;
+    position: absolute;
+}
+
+.ChatPageBack a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4967e2;
+    text-decoration: none;
+}
+
+.InputSection {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.MessagesSection {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.MessagesContainer {
+    bottom: 0;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+}
+
+.Message {
+    border: 1px solid #e4e9ec;
+    clear: both;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    margin: 9px 0;
+    max-width: 95%;
+    padding: 15px;
+    user-select: none;
+    word-break: break-all;
+}
+
+.MessagePending {
+    margin-right: 20px;
+}
+
+.MessageSent {
+    background: #e4e9ec;
+    border-radius: 50px 50px 10px 50px;
+    float: right;
+}
+
+.MessageReceived {
+    border-radius: 10px 50px 50px 50px;
+    background: #ffffff;
+    float: left;
+}
+
+.MessageBottom {
+    float: right;
+}

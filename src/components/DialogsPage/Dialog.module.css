@@ -1,0 +1,65 @@
+.DialogsPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.DialogsSection {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.DialogsContainer {
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+}
+
+.Dialog {
+    margin-top: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.Dialog_interlocutor a {
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    /* identical to box height, or 167% */
+    letter-spacing: 0.01875px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.Dialog_unread {
+    display: inline-block;
+    float: right;
+    line-height: 25px;
+    position: relative;
+    user-select: none;
+}
+
+.Dialog_unread_label {
+    font-size: 12px;
+    line-height: 1;
+}
+
+.Dialog_unread_badge {
+    background-color: #4967e2;
+    border-radius: 50%;
+    color: #ffffff;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin: 2px 5px 5px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+}

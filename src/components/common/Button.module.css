@@ -1,0 +1,31 @@
+.Button {
+    user-select: none;
+    background-color: #4967e2;
+    border-radius: 150px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(60, 101, 243, 0.340636);
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 45px;
+    line-height: 24px;
+    text-align: center;
+    width: 100%;
+}
+.Button:not(:disabled) {
+    cursor: pointer;
+}
+
+.Button::first-letter {
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.Button:focus {
+    outline: none;
+}
+
+.Button:disabled {
+    box-shadow: none;
+    background-color: #c4c8cb;
+}
