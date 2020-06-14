@@ -20,7 +20,6 @@ ReactDOM.render(
                 <App />
             </ConnectedRouter>
         </Provider>
-        ,
     </React.StrictMode>,
     document.getElementById('root')
 );

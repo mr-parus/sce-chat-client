@@ -42,7 +42,7 @@ function IntroPage() {
 
     return (
         <div className={styles.IntroPage}>
-            <Title text={'Joint the Chat!'} style={{ marginBottom: 33 }} />
+            <Title text={'Join the Chat!'} style={{ marginBottom: 33 }} />
 
             <Input
                 value={username}
