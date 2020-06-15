@@ -103,9 +103,9 @@ export class SocketService {
 
     async sendMessage(sender, receiver, messageText) {
         const hash = uuidV4();
-        const message = { from: sender.id, to: receiver.id, text: messageText, hash };
+        const message = { from: sender.id, to: receiver.id, text: messageText };
 
-        const initialMessage = { ...message, sentAt: Date.now() };
+        const initialMessage = { ...message, hash, sentAt: Date.now() };
         this.dispatch(actionTypes.MESSAGE_SEND, { message: initialMessage });
 
         this.emit(socketEventNames.SEND_MESSAGE, [message, this._token, hash]);
@@ -114,10 +114,10 @@ export class SocketService {
             this._socket.on(socketEventNames.SEND_MESSAGE_RESULT, (packet) => {
                 const [errorMessage, receivedHash, id, sentAt] = packet;
                 if (hash === receivedHash) {
-                    const newMessage = { ...message, id, sentAt };
+                    const newMessage = { ...message, id, sentAt, hash };
                     setTimeout(() => {
                         this.dispatch(actionTypes.MESSAGE_RECEIVED_BY_SERVER, { message: createMessage(newMessage) });
-                    }, 100);
+                    }, 30);
                     if (errorMessage) return rej(new Error(errorMessage));
                     res();
                 }
