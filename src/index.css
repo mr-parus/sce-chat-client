@@ -1,15 +1,18 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{height: 100%;}
+html {
+    height: 100vh;
+}
 
 body {
-    height: 100%;
     position: relative;
-    overflow: hidden;
     background-color: black;
     margin: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,19 +43,19 @@ input:focus {
     background-color: #ffffff;
     position: relative;
     width: 375px;
-    height: 720px;
+    height: 700px;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 @media (max-width: 480px) {
     body {
-        display: block;
+
     }
 
     .App {
         width: 100vw;
         height: 100vh;
-        display: block;
     }
 }
 
@@ -68,13 +71,16 @@ html {
 .dialog-enter {
     opacity: 0;
 }
+
 .dialog-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
 }
+
 .dialog-exit {
     opacity: 1;
 }
+
 .dialog-exit-active {
     opacity: 0;
     transition: opacity 500ms ease-in;
